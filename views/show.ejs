@@ -1,0 +1,26 @@
+
+<div>
+    <h3>
+        <%= accident.category %> - <%= accident.time %> , <%= accident.date %>
+    </h3>
+</div>
+<div >
+	<div >
+        <div><%= accident.location %></div>
+        <div><%= accident.vehicles %></div>
+        <div><%= accident.services_used %></div>
+        <div><%= accident.action %></div>
+        <div><%= accident.person.name %>: <%= accident.person.gender %>, <%= accident.person.age %> yrs</div>
+        <div><img src="<%= accident.image %>" height=200 width =200> </div>
+        <div><%= accident.description %></div>
+       
+    </div>
+    <a href="/accidents/<%=accident._id%>/edit" >Update Details</a>
+    <form style="display: inline" method="POST" action="/accidents/<%=accident._id%>?_method=DELETE">
+        <button type="submit">Delete User</button>
+    </form>
+</div>
+
+    
+
+

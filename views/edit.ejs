@@ -1,0 +1,66 @@
+<div >
+    <div>
+        <h2>Edit User</h2>
+    </div>
+    <form action="/accidents/<%= accident._id %>?_method=PUT" method="POST">
+        <div >
+            <label>Accident Category</label>
+            <input type="text" name="accident[category]" value="<%= accident.category %>">
+        </div>
+        <div >
+            <label>Date</label>
+            <input type="text" name="accident[date]" value="<%= accident.date %>">
+        </div>
+        <div >
+            <label>Time</label>
+            <input type="text" name="accident[time]" value="<%= accident.time%>">
+        </div>
+        <div >
+            <label>Location</label>
+            <input type="text" name="accident[location]" value="<%= accident.location %>">
+        </div>
+        <div >
+            <label>Vehicles</label>
+            <input type="text" name="accident[vehicles]" value="<%= accident.vehicles %>">
+        </div>
+        <div >
+            <div>
+                <label>Person Name</label>
+                <input type="text" name="accident[person][name]" value="<%= accident.person.name %>">
+            </div>
+
+            <div>
+                <label>Person Age</label>
+                <input type="Number" name="accident[person][age]" value="<%= accident.person.age %>">
+            </div>
+
+            <div>
+                <label>Person Gender</label>
+                <input type="text" name="accident[person][gender]" value="<%= accident.person.age %>">
+            </div>
+        </div>
+
+        <div>
+            <label>Services Used</label>
+            <input type="text" name="accident[services_used]" value="<%= accident.services_used %>">
+        </div>
+
+        <div>
+            <label>Actions Taken</label>
+            <input type="text" name="accident[action]" value="<%= accident.action %>">
+        </div>
+
+        <div>
+            <label>Image</label>
+            <input type="text" name="accident[image]" value="<%= accident.image %>">
+        </div>
+
+        <div>
+            <label>Description</label>
+            <input type="text" name="accident[description]" value="<%= accident.description %>">
+        </div>
+
+        
+        <button class="ui big violet basic button">Update Details</button>
+    </form>
+</div>

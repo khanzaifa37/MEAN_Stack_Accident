@@ -1,0 +1,39 @@
+
+   
+<div >Accident Details</div>
+<table>
+    <tr>
+        <th>Accident Category </th>
+        <th>Date </th>
+        <th>Time </th>
+        <th>Location </th>
+        <th>Vechiles involved </th>
+        <th>Person Details </th>
+        <th>Services</th>
+        <th>Action</th>
+        <th>Image</th>
+        <th>Description</th>
+        <th>Read More</th>
+    </tr>
+	<% accidents.forEach(function(accident){ %>
+	 <tr>
+         <td><%= accident.category %></td>
+         <td><%= accident.date %></td>
+         <td><%= accident.time %></td>
+         <td><%= accident.location %></td>
+         <td><%= accident.vehicles %></td>
+         <td><%= accident.person.name %>, <%= accident.person.age %>,<%= accident.person.gender %> </td>
+         
+         <td><%= accident.services_used %></td>
+         
+         
+         <td><%= accident.action %></td>
+         <td><img src="<%= accident.image %>" height="50" width="50"></td>
+         <td><%= accident.description %></td>
+         <% var url= "/accidents/"+ accident._id %>
+         <td><a href="<%= url %>">More...</a></td>
+     </tr>
+	<% }); %>
+</table>
+<a href="/accidents/new">New Record</a>
+
