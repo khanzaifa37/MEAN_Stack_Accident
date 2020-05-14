@@ -5,6 +5,10 @@
   background-color: #902AEA ;
   color:white;
 }
+.delete:hover{
+  background-color: #9877AD  ;
+  color:white;
+}
 .btn{
   color:white;
 }
@@ -13,6 +17,9 @@
 }
 .btn-view{
   background-color:#C0F343 ;
+}
+.btn-view:hover{
+  background-color:rgb(139, 185, 112) ;
 }
 .h2{
   margin-bottom: 10px;;
