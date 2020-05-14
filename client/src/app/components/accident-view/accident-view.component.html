@@ -1,0 +1,35 @@
+<div class="container">
+  <!-- No data message -->
+  <p *ngIf="Accident.length <= 0" class="no-data text-center">There is no accident found!</p>
+
+  <!-- Employee list -->
+  <div *ngIf="Accident.length > 0">
+      <div *ngFor="let accident of Accident; let i = index">
+        <div class="row text-center">
+          <div class="col-sm">
+            <span class="top-heading">Category:</span> {{accident.category}}
+          </div>
+          <div class="col-sm text-center">
+            <span class="top-heading">Date: </span>{{accident.date}}
+          </div>
+          <div class="col-sm text-center">
+            <span class="top-heading">Time:</span> {{accident.time}}
+          </div>
+        </div>
+        <br><br><hr><br>
+        <div class="top-heading">Description: </div>
+        <p class="des">
+          {{accident.description}}
+        </p>
+        <br>
+        <div >
+          <div style="font-size: 30px;">Image from Scene: </div>
+          <img src="{{accident.image}}"alt="N.A."  height="250" width="350">
+        </div>
+
+
+
+      </div>
+
+  </div>
+</div>

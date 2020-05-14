@@ -1,0 +1,19 @@
+.container{
+  padding-top:25px;
+}
+.delete{
+  background-color: #902AEA ;
+  color:white;
+}
+.btn{
+  color:white;
+}
+.btn-warning{
+  margin-right: 10px;
+}
+.btn-view{
+  background-color:#C0F343 ;
+}
+.h2{
+  margin-bottom: 10px;;
+}

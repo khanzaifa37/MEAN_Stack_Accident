@@ -1,0 +1,18 @@
+.nav{
+  background-color: #010101;
+  height:65px;
+  margin-bottom:20px;
+  padding-top: 10px;;
+}
+.nav .nav-item{
+display:inline;
+font-size:24px;
+font-family: 'Playfair Display', serif;
+	margin-left: 10px;
+  padding-left: 10px;
+
+  color:white
+}
+a{
+  color:white;
+}

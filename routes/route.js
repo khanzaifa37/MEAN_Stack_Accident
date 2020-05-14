@@ -28,7 +28,9 @@ router.post("/accidents/create",(req,res,next)=>{
     let newAccident=new Accident({
         category:   req.body.category,
         date:   req.body.date,
-        time:   req.body.time
+        time:   req.body.time,
+        description: req.body.description,
+        image: req.body.image
     })
     
     // Accident.create(req.body.accident,(err,accident)=>{
@@ -54,7 +56,10 @@ router.put("/accidents/update/:id",function(req,res){
         { $set: {                // <-- set stage
            category: req.body.category,     // <-- id not _id
            date: req.body.date,
-           time: req.body.time
+           time: req.body.time,
+           description: req.body.description,
+           image: req.body.image
+
           } 
         } ,function(err)
         {

@@ -3,4 +3,6 @@ export class Accident{
   category: string;
   time: string;
   date: string;
+  description: string;
+  image:string;
 }

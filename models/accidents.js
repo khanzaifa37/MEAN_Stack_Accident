@@ -13,7 +13,13 @@ const AccidentSchema = new mongoose.Schema({
     time: {
         type:String,
         required:true
-    } 
+    } ,
+    description:{
+        type:String
+    },
+    image:{
+        type:String
+    }
 });
 
 // Creating a user Model

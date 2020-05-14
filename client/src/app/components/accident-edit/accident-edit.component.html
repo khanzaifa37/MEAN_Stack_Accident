@@ -1,0 +1,68 @@
+<div class="row justify-content-center">
+  <div class="col-md-4 register-employee">
+    <!-- form card register -->
+    <div class="card card-outline-secondary">
+      <div class="card-header">
+        <h3 class="mb-0">Edit Accident Details</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <label for="inputCategory">Category</label>
+            <input class="form-control" type="text" formControlName="category">
+            <div class="invalid-feedback" *ngIf="submitted && myForm.category.errors?.required">
+              Category is required.
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputDate">Date</label>
+            <input class="form-control" type="date" formControlName="date">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.date.errors?.required">
+              Enter the date.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.date.errors?.pattern">
+              Enter valid date.
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label for="inputTime">Time</label>
+            <input class="form-control" type="time" formControlName="time">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.time.errors?.required">
+              Enter time.
+            </div>
+            <div class="invalid-feedback" *ngIf="submitted && myForm.time.errors?.pattern">
+              Enter time Only
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="inputImage">Image URL</label>
+            <input class="form-control" type="text" formControlName="image">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.image.errors?.required">
+              Image is required If not available enter NA .
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputDescription">Description</label>
+            <input class="form-control" type="text" formControlName="description">
+            <!-- error -->
+            <div class="invalid-feedback" *ngIf="submitted && myForm.description.errors?.required">
+              Description is required.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Update</button>
+          </div>
+        </form>
+      </div>
+    </div><!-- form  -->
+  </div>
+</div>
