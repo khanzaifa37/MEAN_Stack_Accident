@@ -11,6 +11,7 @@ import { AccidentCreateComponent } from './components/accident-create/accident-c
 import { AccidentEditComponent } from './components/accident-edit/accident-edit.component';
 import { AccidentListComponent } from './components/accident-list/accident-list.component';
 import { AccidentViewComponent } from './components/accident-view/accident-view.component';
+import {FilterPipe} from './components/accident-list/filter.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { AccidentViewComponent } from './components/accident-view/accident-view.
     AccidentEditComponent,
     AccidentListComponent,
     AccidentViewComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

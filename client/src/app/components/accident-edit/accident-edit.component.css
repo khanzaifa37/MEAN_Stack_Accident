@@ -1,0 +1,9 @@
+label{
+  font-weight: bold;
+  width:98%;
+}
+label span{
+ float: right;
+  color:grey;
+  font-weight: 100;
+}

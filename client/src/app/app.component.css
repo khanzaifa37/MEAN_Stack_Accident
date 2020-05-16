@@ -16,3 +16,17 @@ font-family: 'Playfair Display', serif;
 a{
   color:white;
 }
+
+.foot{
+  position:fixed;
+  bottom:0px;
+  }
+
+
+  .left, .right
+  {
+    display: inline;
+  }
+.right{
+  text-align:right;
+}

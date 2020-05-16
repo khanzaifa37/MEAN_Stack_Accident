@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-  <div class="col-md-4 register-employee">
+  <div class="col-md-8 register-employee">
     <div class="card card-outline-secondary">
       <div class="card-header">
         <h3 class="mb-0">Enter Details</h3>
@@ -8,8 +8,8 @@
     <div class="card-body">
       <form [formGroup]="accidentForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label for="inputCategory">Category</label>
-          <input class="form-control" type="text" formControlName="category">
+          <label for="inputCategory">Category  <span><i class="fa fa-list" aria-hidden="true"></i></span></label>
+          <input class="form-control" type="text" formControlName="category" placeholder="Train/Air/Road etc.">
           <!-- error -->
           <div class="invalid-feedback" *ngIf="submitted && myForm.category.errors?.required">
             Category is required.
@@ -17,7 +17,7 @@
         </div>
 
         <div class="form-group">
-          <label for="inputDate">Date</label>
+          <label for="inputDate">Date  <span><i class="fa fa-calendar-o" aria-hidden="true"></i></span></label>
           <input class="form-control" type="date" formControlName="date">
           <!-- error -->
           <div class="invalid-feedback" *ngIf="submitted && myForm.date.errors?.required">
@@ -31,7 +31,7 @@
 
 
         <div class="form-group">
-          <label for="inputTime">Time</label>
+          <label for="inputTime">Time  <span><i class="fa fa-clock-o"></i></span></label>
           <input class="form-control" type="time" formControlName="time">
           <!-- error -->
           <div class="invalid-feedback" *ngIf="submitted && myForm.time.errors?.required">
@@ -43,16 +43,53 @@
         </div>
 
         <div class="form-group">
-          <label for="inputImage">Image URL</label>
-          <input class="form-control" type="text" formControlName="image">
+          <label for="inputImage">Image URL  <span><i class="fa fa-picture-o" aria-hidden="true"></i></span></label>
+          <input class="form-control" type="text" formControlName="image" placeholder="https://www.yourimage.jpg">
           <!-- error -->
           <div class="invalid-feedback" *ngIf="submitted && myForm.image.errors?.required">
             Image is required If not available enter NA ).
           </div>
         </div>
+
+
+        <div class="form-group">
+          <label for="inputLocation">Location  <span><i class="fa fa-map-marker" aria-hidden="true"></i></span></label>
+          <input class="form-control" type="text" formControlName="location" placeholder="Berlin Bridge, Germany">
+          <!-- error -->
+          <div class="invalid-feedback" *ngIf="submitted && myForm.location.errors?.required">
+            Location is required If not available enter NA ).
+          </div>
+        </div>
+
+
+
+        <div class="form-group">
+          <label for="inputAids">Services Used  <span><i class="fa fa-plus" aria-hidden="true"></i></span></label>
+          <select class="form-control" type="text" formControlName="aids">
+            <option value="Police">Police</option>
+            <option value="Fire Dept.">Fire Department</option>
+            <option value="Hospital">Hospital</option>
+            <option value="Others (add in description)">Others</option>
+          </select>
+          <!-- <input class="form-control" type="text" formControlName="aids" placeholder="Police/Ambulance etc."> -->
+          <!-- error -->
+          <div class="invalid-feedback" *ngIf="submitted && myForm.aids.errors?.required">
+            Services field is required If not available enter NA ).
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="inputResp">Response to Incident</label>
+          <input class="form-control" type="text" formControlName="resp" placeholder="Emergency Room was called.">
+          <!-- error -->
+          <div class="invalid-feedback" *ngIf="submitted && myForm.resp.errors?.required">
+            Response field is required If not available enter NA ).
+          </div>
+        </div>
         <div class="form-group">
           <label for="inputDescription">Description</label>
-          <input class="form-control" type="text" formControlName="description">
+          <textarea class="form-control" type="text" style="height:150px" formControlName="description" placeholder="People: Mr. John Smith,abc etc., Incident:___ ,Vehicle No: ____ etc."></textarea>
           <!-- error -->
           <div class="invalid-feedback" *ngIf="submitted && myForm.description.errors?.required">
             Description is required.

@@ -30,7 +30,10 @@ router.post("/accidents/create",(req,res,next)=>{
         date:   req.body.date,
         time:   req.body.time,
         description: req.body.description,
-        image: req.body.image
+        image: req.body.image,
+        location:req.body.location,
+        resp:req.body.resp,
+        aids:req.body.aids
     })
     
     // Accident.create(req.body.accident,(err,accident)=>{
@@ -58,7 +61,10 @@ router.put("/accidents/update/:id",function(req,res){
            date: req.body.date,
            time: req.body.time,
            description: req.body.description,
-           image: req.body.image
+           image: req.body.image,
+           location:req.body.location,
+            resp:req.body.resp,
+            aids:req.body.aids
 
           } 
         } ,function(err)

@@ -33,6 +33,11 @@ export class AccidentEditComponent implements OnInit {
       time: ['', [Validators.required]],
       description: ['', [Validators.required]],
      image: ['', [Validators.required]],
+     location: ['', [Validators.required]],
+     resp: ['', [Validators.required]],
+     aids: ['', [Validators.required]],
+
+
 
     })
   }
@@ -54,6 +59,9 @@ export class AccidentEditComponent implements OnInit {
         time: data[0]['time'],
         description: data[0]['description'],
         image: data[0]['image'],
+        location:data[0]['location'],
+        resp:data[0]['resp'],
+        aids:data[0]['aids'],
       });
     });
   }
@@ -65,7 +73,9 @@ export class AccidentEditComponent implements OnInit {
       time: ['', [Validators.required]],
       description: ['', [Validators.required]],
       image: ['', [Validators.required]],
-
+      location: ['', [Validators.required]],
+      resp: ['', [Validators.required]],
+      aids: ['', [Validators.required]],
     })
   }
 

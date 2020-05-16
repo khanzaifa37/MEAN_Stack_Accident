@@ -19,6 +19,9 @@ export class AccidentCreateComponent implements OnInit {
   date:string;
   time:string;
   image:string;
+  location:string;
+  resp:string;
+  aids:string;
   description:string;
   accidents:Accident[];
   accident:Accident;
@@ -42,6 +45,9 @@ export class AccidentCreateComponent implements OnInit {
       time: ['', [Validators.required]],
       image: ['', [Validators.required]],
       description: ['', [Validators.required]],
+      location: ['', [Validators.required]],
+      resp: ['', [Validators.required]],
+      aids: ['', [Validators.required]],
 
     })
   }
@@ -68,7 +74,11 @@ export class AccidentCreateComponent implements OnInit {
         date:this.date,
         time:this.time,
         image:this.image,
-        description:this.description
+        description:this.description,
+        location:this.location,
+        resp:this.resp,
+        aids:this.aids,
+
       }
       // this.accidentService.addAccident(newAccident).subscribe(accident=>{
       //   this.accidents.push(accident);

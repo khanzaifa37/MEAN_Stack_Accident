@@ -17,7 +17,20 @@
           </div>
         </div>
         <br><br><hr><br>
-        <div class="top-heading">Description: </div>
+        <div class="row">
+          <div class=" col-lg-6 col-md-4 row-heading">Location:</div>
+          <div class=" col-lg-6 col-md-4 row-content"> {{accident.location}}</div>
+        </div>
+       <div class="row">
+        <div class=" col-lg-6 col-md-4 row-heading">Response:</div>
+        <div class=" col-lg-6 col-md-4 row-content">{{accident.resp}}</div>
+       </div>
+       <div class="row">
+        <div class=" col-lg-6 col-md-4 row-heading">Services Used:</div>
+        <div class=" col-lg-6 col-md-4 row-content"> {{accident.aids}}</div>
+      </div>
+      <hr>
+        <div class="row-heading">Description: </div>
         <p class="des">
           {{accident.description}}
         </p>

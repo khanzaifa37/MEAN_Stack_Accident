@@ -19,6 +19,15 @@ const AccidentSchema = new mongoose.Schema({
     },
     image:{
         type:String
+    },
+    location:{
+        type:String,
+    },
+    resp:{
+        type:String
+    },
+    aids:{
+        type:String
     }
 });
 
