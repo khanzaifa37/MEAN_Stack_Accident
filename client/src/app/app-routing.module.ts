@@ -7,7 +7,7 @@ import { AccidentEditComponent } from './components/accident-edit/accident-edit.
 import { AccidentViewComponent } from './components/accident-view/accident-view.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'create-employee' },
+  { path: '', pathMatch: 'full', redirectTo: 'accidents-list' },
   { path: 'create-accident', component: AccidentCreateComponent },
   { path: 'edit-accident/:id', component: AccidentEditComponent },
   { path: 'accidents-list', component: AccidentListComponent },

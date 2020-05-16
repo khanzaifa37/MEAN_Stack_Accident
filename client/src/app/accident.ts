@@ -5,4 +5,7 @@ export class Accident{
   date: string;
   description: string;
   image:string;
+  location:string;
+  resp:string;
+  aids:string;
 }
