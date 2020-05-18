@@ -21,18 +21,18 @@ app.use(express.static("public"));
 app.use(methodOverride('_method'));
 app.use('/api',route);
 
-mongoose.connect("mongodb://localhost:27017/accident_db",{useNewUrlParser: true})
+mongoose.connect("mongodb://database:27017/accident_db",{useNewUrlParser: true})
 mongoose.connection.on("connected",()=>{
-    console.log("Connected to mongo @27017");
+    console.log("Connected to server mongo @27017");
 });
 
 
 mongoose.connection.on("error",(err)=>{
     if(err)
-    console.log("Error Connecting to mongo @27017");
+    console.log("Error from here in connecting to mongo @27017");
 });
 
 
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log("Listening at http://localhost:3000");
 } );
