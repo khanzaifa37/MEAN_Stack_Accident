@@ -1,0 +1,8 @@
+---
+applications:
+- name: my_means_tack
+  instances: 1
+  path: .
+  command: npm install && npm start
+  services:
+  - mongo

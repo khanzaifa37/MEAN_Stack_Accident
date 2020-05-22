@@ -10,12 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
+    "cfenv": "^1.2.2",
     "cors": "^2.8.5",
     "ejs": "^3.1.2",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.9.13",
-    "request": "^2.88.2"
+    "nvm": "0.0.4",
+    "request": "^2.88.2",
+    "vcap_services": "^0.7.1"
   }
 }
